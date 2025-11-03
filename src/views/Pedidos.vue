@@ -2,7 +2,7 @@
   <div class="pedidos-page">
     <div class="container">
       <div class="page-header">
-        <h1>📦 Gestión de Pedidos</h1>
+        <h1>Gestión de Pedidos</h1>
         <p>Administra y sigue el estado de los pedidos del restaurante</p>
       </div>
 
@@ -72,7 +72,7 @@
                 <div class="pedido-info">
                   <h3>Pedido #{{ pedido.id }}</h3>
                   <p class="pedido-fecha">{{ formatDate(pedido.fecha) }}</p>
-                  <p class="pedido-usuario">👤 {{ pedido.usuarioNombre || 'Usuario desconocido' }}</p>
+                  <p class="pedido-usuario">{{ pedido.usuarioNombre || 'Usuario desconocido' }}</p>
                 </div>
                 
                 <div class="pedido-total">
@@ -195,44 +195,44 @@ const filters = reactive<PedidoFilters & PagedRequest>({
 
 // Computed
 const canChangeEstado = computed(() => {
-  console.log('🔍 Verificando permisos - isAdmin:', authStore.isAdmin, 'isMesero:', authStore.isMesero)
+  console.log('Verificando permisos - isAdmin:', authStore.isAdmin, 'isMesero:', authStore.isMesero)
   return authStore.isAdmin || authStore.isMesero
 })
 
 // Cargar estados de pedido
 const loadEstadosPedido = async () => {
-  console.log('🔄 Cargando estados de pedido...')
+  console.log('Cargando estados de pedido...')
   try {
     const response = await apiService.getEstadosPedido()
-    console.log('📥 Estados recibidos:', response)
+    console.log('Estados recibidos:', response)
     estadosPedido.value = response
   } catch (err) {
-    console.error('❌ Error al cargar estados:', err)
+    console.error('Error al cargar estados:', err)
   }
 }
 
 // Cargar pedidos
 const loadPedidos = async () => {
-  console.log('🔄 Iniciando carga de pedidos...')
+  console.log('Iniciando carga de pedidos...')
   loading.value = true
   error.value = ''
   
   try {
-    console.log('📤 Enviando filtros:', filters)
+    console.log('Enviando filtros:', filters)
     const response = await apiService.getPedidos(filters)
-    console.log('📥 Respuesta recibida:', response)
+    console.log('Respuesta recibida:', response)
     
     pedidos.value = response.data
     pagination.value = response.pagination
     
-    console.log('✅ Pedidos cargados:', pedidos.value.length)
-    console.log('📊 Paginación:', pagination.value)
+    console.log('Pedidos cargados:', pedidos.value.length)
+    console.log('Paginación:', pagination.value)
   } catch (err: any) {
-    console.error('❌ Error al cargar pedidos:', err)
-    console.error('❌ Error details:', err.response?.data)
+    console.error('Error al cargar pedidos:', err)
+    console.error('Error details:', err.response?.data)
     error.value = err.response?.data?.message || 'Error al cargar pedidos'
   } finally {
-    console.log('🏁 Finalizando carga de pedidos')
+    console.log('Finalizando carga de pedidos')
     loading.value = false
   }
 }
@@ -328,16 +328,16 @@ const getValidEstados = (estadoActual: number) => {
 
 // Cargar datos iniciales
 onMounted(async () => {
-  console.log('🚀 Componente Pedidos montado, iniciando carga de datos...')
+  console.log('Componente Pedidos montado, iniciando carga de datos...')
   
   try {
-    console.log('📋 Cargando estados de pedido...')
+    console.log('Cargando estados de pedido...')
     await loadEstadosPedido()
-    console.log('✅ Estados cargados, ahora cargando pedidos...')
+    console.log('Estados cargados, ahora cargando pedidos...')
     await loadPedidos()
-    console.log('🎉 Carga inicial completada')
+    console.log('Carga inicial completada')
   } catch (err) {
-    console.error('❌ Error en carga inicial:', err)
+    console.error('Error en carga inicial:', err)
   }
 })
 </script>

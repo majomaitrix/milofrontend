@@ -2,7 +2,7 @@
   <div class="dashboard-page">
     <div class="container">
       <div class="page-header">
-        <h1>📊 Dashboard</h1>
+        <h1>Dashboard</h1>
         <p>Bienvenido, {{ user?.nombre || 'Usuario' }} - {{ userRole }}</p>
         <div class="user-info">
           <div class="user-details">
@@ -15,7 +15,7 @@
       <!-- Métricas principales -->
       <div class="metrics-grid">
         <div class="metric-card">
-          <div class="metric-icon">📋</div>
+          <div class="metric-icon"></div>
           <div class="metric-content">
             <h3>{{ metrics.categorias }}</h3>
             <p>Categorías Activas</p>
@@ -23,7 +23,7 @@
         </div>
         
         <div class="metric-card">
-          <div class="metric-icon">🍕</div>
+          <div class="metric-icon"></div>
           <div class="metric-content">
             <h3>{{ metrics.productos }}</h3>
             <p>Productos en Stock</p>
@@ -31,7 +31,7 @@
         </div>
         
         <div class="metric-card">
-          <div class="metric-icon">📦</div>
+          <div class="metric-icon"></div>
           <div class="metric-content">
             <h3>{{ metrics.pedidosHoy }}</h3>
             <p>Pedidos Hoy</p>
@@ -39,7 +39,7 @@
         </div>
         
         <div class="metric-card">
-          <div class="metric-icon">💰</div>
+          <div class="metric-icon"></div>
           <div class="metric-content">
             <h3>${{ metrics.ventasHoy.toFixed(2) }}</h3>
             <p>Ventas Hoy</p>
@@ -87,22 +87,22 @@
         <h3>Acciones Rápidas</h3>
         <div class="quick-actions">
           <router-link to="/categorias" class="action-btn">
-            <div class="action-icon">📋</div>
+            <div class="action-icon"></div>
             <div class="action-text">Gestionar Categorías</div>
           </router-link>
           
           <router-link to="/productos" class="action-btn">
-            <div class="action-icon">🍕</div>
+            <div class="action-icon"></div>
             <div class="action-text">Gestionar Productos</div>
           </router-link>
           
           <router-link to="/pedidos" class="action-btn">
-            <div class="action-icon">📦</div>
+            <div class="action-icon"></div>
             <div class="action-text">Ver Pedidos</div>
           </router-link>
           
           <button @click="refreshData" class="action-btn">
-            <div class="action-icon">🔄</div>
+            <div class="action-icon"></div>
             <div class="action-text">Actualizar Datos</div>
           </button>
         </div>

@@ -2,7 +2,7 @@
   <div class="home">
     <div class="hero-section">
       <div class="container">
-        <h1 class="hero-title">🍽️ Bienvenido a Milo Restaurant</h1>
+        <h1 class="hero-title">Bienvenido a Milo Restaurant</h1>
         <p class="hero-subtitle">Sistema de Gestión Integral para Restaurantes</p>
         <div class="hero-actions">
           <router-link to="/categorias" class="btn btn-primary">Ver Categorías</router-link>
@@ -16,37 +16,37 @@
         <h2>Características del Sistema</h2>
         <div class="grid grid-3">
           <div class="card feature-card">
-            <div class="feature-icon">📋</div>
+            <div class="feature-icon"></div>
             <h3>Gestión de Categorías</h3>
             <p>Organiza tus productos por categorías con paginación y búsqueda avanzada.</p>
           </div>
           
           <div class="card feature-card">
-            <div class="feature-icon">🍕</div>
+            <div class="feature-icon"></div>
             <h3>Gestión de Productos</h3>
             <p>Administra tu inventario con filtros avanzados y control de stock.</p>
           </div>
           
           <div class="card feature-card">
-            <div class="feature-icon">📦</div>
+            <div class="feature-icon"></div>
             <h3>Gestión de Pedidos</h3>
             <p>Sistema completo de pedidos con estados y seguimiento en tiempo real.</p>
           </div>
           
           <div class="card feature-card">
-            <div class="feature-icon">👥</div>
+            <div class="feature-icon"></div>
             <h3>Control de Usuarios</h3>
             <p>Gestión de roles y permisos para diferentes tipos de usuarios.</p>
           </div>
           
           <div class="card feature-card">
-            <div class="feature-icon">🔐</div>
+            <div class="feature-icon"></div>
             <h3>Autenticación Segura</h3>
             <p>Sistema de autenticación con JWT y refresh tokens para máxima seguridad.</p>
           </div>
           
           <div class="card feature-card">
-            <div class="feature-icon">📊</div>
+            <div class="feature-icon"></div>
             <h3>Dashboard</h3>
             <p>Panel de control con métricas y estadísticas en tiempo real.</p>
           </div>

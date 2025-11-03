@@ -2,7 +2,7 @@
   <div class="categorias-page">
     <div class="container">
       <div class="page-header">
-        <h1>📋 Gestión de Categorías</h1>
+        <h1>Gestión de Categorías</h1>
         <p>Administra las categorías de productos del restaurante</p>
       </div>
 

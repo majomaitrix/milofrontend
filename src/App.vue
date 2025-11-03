@@ -2,7 +2,7 @@
   <div id="app">
     <nav class="navbar">
       <div class="nav-brand">
-        <h1>🍽️ Milo Restaurant</h1>
+        <h1>Milo Restaurant</h1>
       </div>
       <div class="nav-menu">
         <router-link to="/" class="nav-link">Inicio</router-link>

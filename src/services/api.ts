@@ -30,9 +30,9 @@ class ApiService {
   private api: AxiosInstance
 
   constructor() {
-    // En desarrollo usa localhost, en producción usa la variable de entorno o '/api' como fallback
+    // En desarrollo usa localhost, en producción usa la variable de entorno o la URL de Render como fallback
     const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || 
-                       (import.meta.env.DEV ? 'http://localhost:7039' : '/api')
+                       (import.meta.env.DEV ? 'http://localhost:7039' : 'https://miloapi.onrender.com')
     
     this.api = axios.create({
       baseURL: apiBaseUrl,

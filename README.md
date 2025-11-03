@@ -2,7 +2,7 @@
 
 Aplicación frontend para la gestión de un restaurante. Incluye autenticación por roles, administración de productos, listado y gestión de pedidos con cambio de estado, notificaciones, paginación y filtros avanzados.
 
-## 🚀 Stack
+## Stack
 - Framework: Vue 3 (Composition API)
 - Lenguaje: TypeScript
 - Router: Vue Router 4
@@ -11,7 +11,7 @@ Aplicación frontend para la gestión de un restaurante. Incluye autenticación 
 - Build: Vite
 - Estilos: CSS
 
-## ✨ Funcionalidades
+## Funcionalidades
 - Autenticación con JWT (login/logout) y guard de rutas con validación de roles.
 - Gestión de usuarios (crear cuenta) y roles.
 - Productos: listado con paginación y filtros avanzados (categoría, precio, stock, estado), CRUD de productos (Admin).
@@ -20,7 +20,7 @@ Aplicación frontend para la gestión de un restaurante. Incluye autenticación 
 - Notificaciones tipo toast.
 - Dashboard con métricas básicas.
 
-## 📦 Estructura principal
+## Estructura principal
 - `src/views/*`: Vistas (Home, Login, Categorias, Productos, Pedidos, AdminProductos, CreateUser, Dashboard)
 - `src/services/api.ts`: Cliente HTTP (Axios) y métodos para consumir la API
 - `src/stores/auth.ts`: Store de autenticación (Pinia)
@@ -28,7 +28,7 @@ Aplicación frontend para la gestión de un restaurante. Incluye autenticación 
 - `src/components/*`: Componentes (Notification, NotificationContainer, ImageUpload)
 - `src/types/index.ts`: Tipos y DTOs compartidos
 
-## 🔌 API esperada (resumen)
+## API esperada (resumen)
 Base URL (dev): `http://localhost:7039/api`
 
 Autenticación (`/api/Auth/*`):
@@ -57,7 +57,7 @@ Usuarios (`/api/Usuarios/*`):
 Health (`/api/Health*`):
 - `GET /api/Health`, `GET /api/Health/ready`, `GET /api/Health/live`
 
-## ⚙️ Configuración y ejecución
+## Configuración y ejecución
 
 1) Requisitos
 - Node.js 18+
@@ -89,18 +89,18 @@ npm run build
 npm run preview
 ```
 
-## 🔐 Autenticación y Roles
+## Autenticación y Roles
 - El login usa `POST /api/Auth/login` y guarda `accessToken` (+ `refreshToken?`).
 - Guard de rutas:
   - `meta.requiresAuth`: requiere token.
   - `meta.roles`: valida el rol del usuario (p. ej. `['Admin']`).
 - Si el backend responde `401`, se limpia la sesión y se redirige a `/login`.
 
-## 🧪 Puntos a revisar al integrar backend
-- Endpoints `/api/Auth/refresh` y `/api/Auth/change-password` están marcados “en desarrollo”. El cliente no intenta refresh automático.
+## Puntos a revisar al integrar backend
+- Endpoints `/api/Auth/refresh` y `/api/Auth/change-password` están marcados "en desarrollo". El cliente no intenta refresh automático.
 - Si cambian los nombres de roles ("Administrador"/"Admin"), el router normaliza para evitar conflictos.
 
-## 🖼️ Screenshots (sugeridos)
+## Screenshots (sugeridos)
 - Login
 - Productos (filtros)
 - Pedidos (cambio de estado)
@@ -109,7 +109,7 @@ npm run preview
 
 Colócalos en `docs/screenshots/` y referencia aquí.
 
-## 🛠️ Scripts útiles
+## Scripts útiles
 ```bash
 npm run dev       # entorno de desarrollo
 npm run build     # build de producción
@@ -118,13 +118,12 @@ npm run lint      # lint + fix
 npm run format    # formateo con Prettier
 ```
 
-## ✅ Estado del proyecto
+## Estado del proyecto
 - Integrado con endpoints `/api/Auth/*` y `/api/Parameter/*` documentados.
 - Filtros avanzados de productos conectados al backend.
 - Guard de rutas con validación de roles funcionando.
 - CRUD de productos operativo.
 - Cambio de estado de pedidos validado por roles y transiciones.
 
-## 📄 Licencia
+## Licencia
 MIT
-

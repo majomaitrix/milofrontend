@@ -1,8 +1,8 @@
-# 🚀 Guía de Despliegue - Milo Frontend
+# Guía de Despliegue - Milo Frontend
 
 Esta guía te ayudará a desplegar el frontend de Milo en diferentes plataformas.
 
-## 📋 Requisitos Previos
+## Requisitos Previos
 
 1. **Cuenta de GitHub/GitLab/Bitbucket** (para el repositorio)
 2. **URL de tu API en Render** (ejemplo: `https://milo-api.onrender.com`)
@@ -10,15 +10,15 @@ Esta guía te ayudará a desplegar el frontend de Milo en diferentes plataformas
 
 ---
 
-## 🌐 Opción 1: Vercel (Recomendado)
+## Opción 1: Vercel (Recomendado)
 
 ### Ventajas
-- ✅ Gratis con generoso plan gratuito
-- ✅ Despliegue automático desde Git
-- ✅ CDN global muy rápido
-- ✅ SSL automático
-- ✅ Configuración muy sencilla
-- ✅ Preview de Pull Requests automático
+- Gratis con generoso plan gratuito
+- Despliegue automático desde Git
+- CDN global muy rápido
+- SSL automático
+- Configuración muy sencilla
+- Preview de Pull Requests automático
 
 ### Pasos para desplegar en Vercel
 
@@ -61,12 +61,12 @@ Esta guía te ayudará a desplegar el frontend de Milo en diferentes plataformas
 5. **Configurar variables de entorno**
    - En la sección "Environment Variables", agrega:
      - **Name**: `VITE_API_BASE_URL`
-     - **Value**: `https://tu-api-en-render.onrender.com` (reemplaza con tu URL real)
+     - **Value**: `https://miloapi.onrender.com`
 
 6. **Desplegar**
    - Haz clic en "Deploy"
    - Espera unos minutos
-   - ¡Listo! Tu app estará en `https://tu-proyecto.vercel.app`
+   - Listo! Tu app estará en `https://tu-proyecto.vercel.app`
 
 ### Configuración de dominio personalizado (opcional)
 - Ve a Project Settings → Domains
@@ -74,14 +74,14 @@ Esta guía te ayudará a desplegar el frontend de Milo en diferentes plataformas
 
 ---
 
-## 🌐 Opción 2: Netlify
+## Opción 2: Netlify
 
 ### Ventajas
-- ✅ Gratis con buen plan gratuito
-- ✅ Despliegue automático desde Git
-- ✅ CDN rápido
-- ✅ SSL automático
-- ✅ Funciones serverless incluidas
+- Gratis con buen plan gratuito
+- Despliegue automático desde Git
+- CDN rápido
+- SSL automático
+- Funciones serverless incluidas
 
 ### Pasos para desplegar en Netlify
 
@@ -121,12 +121,12 @@ Esta guía te ayudará a desplegar el frontend de Milo en diferentes plataformas
 
 ---
 
-## 🌐 Opción 3: Render (Static Site)
+## Opción 3: Render (Static Site)
 
 ### Ventajas
-- ✅ Mantienes todo en Render (API + Frontend)
-- ✅ Gratis con plan estático
-- ✅ Despliegue automático
+- Mantienes todo en Render (API + Frontend)
+- Gratis con plan estático
+- Despliegue automático
 
 ### Pasos para desplegar en Render
 
@@ -149,7 +149,7 @@ Esta guía te ayudará a desplegar el frontend de Milo en diferentes plataformas
 5. **Configurar variables de entorno**
    - En "Environment Variables", agrega:
      - **Key**: `VITE_API_BASE_URL`
-     - **Value**: `https://tu-api-en-render.onrender.com`
+     - **Value**: `https://miloapi.onrender.com`
 
 6. **Desplegar**
    - Haz clic en "Create Static Site"
@@ -157,12 +157,12 @@ Esta guía te ayudará a desplegar el frontend de Milo en diferentes plataformas
 
 ---
 
-## 🌐 Opción 4: Cloudflare Pages
+## Opción 4: Cloudflare Pages
 
 ### Ventajas
-- ✅ Gratis ilimitado (ancho de banda)
-- ✅ Muy rápido (CDN global)
-- ✅ SSL automático
+- Gratis ilimitado (ancho de banda)
+- Muy rápido (CDN global)
+- SSL automático
 
 ### Pasos para desplegar en Cloudflare Pages
 
@@ -189,14 +189,14 @@ Esta guía te ayudará a desplegar el frontend de Milo en diferentes plataformas
 
 ---
 
-## 🔧 Configuración Post-Despliegue
+## Configuración Post-Despliegue
 
 ### 1. Verificar que la API esté accesible
 
 Asegúrate de que tu API en Render:
-- ✅ Esté desplegada y funcionando
-- ✅ Tenga CORS configurado para permitir tu dominio frontend
-- ✅ Tenga la URL correcta (sin `/api` al final si tu API ya incluye `/api` en las rutas)
+- Esté desplegada y funcionando (https://miloapi.onrender.com)
+- Tenga CORS configurado para permitir tu dominio frontend
+- Tenga la URL correcta: `https://miloapi.onrender.com` (sin `/api` al final)
 
 ### 2. Configurar CORS en tu API (si es necesario)
 
@@ -231,7 +231,7 @@ app.UseCors("AllowFrontend");
 
 ---
 
-## 📝 Variables de Entorno por Entorno
+## Variables de Entorno por Entorno
 
 ### Desarrollo Local
 ```bash
@@ -240,14 +240,14 @@ VITE_API_BASE_URL=http://localhost:7039
 
 ### Producción (Vercel/Netlify/Render/Cloudflare)
 ```bash
-VITE_API_BASE_URL=https://tu-api-en-render.onrender.com
+VITE_API_BASE_URL=https://miloapi.onrender.com
 ```
 
-**Nota**: Asegúrate de que la URL de la API **NO** termine con `/api` si tu API ya incluye `/api` en todas las rutas.
+**Nota**: La URL base de la API **NO** debe incluir `/api` al final, ya que los endpoints ya tienen el prefijo `/api` en las rutas (ej: `/api/Parameter/get-categorias`).
 
 ---
 
-## 🐛 Solución de Problemas Comunes
+## Solución de Problemas Comunes
 
 ### Error: CORS policy blocked
 **Solución**: Configura CORS en tu API para permitir tu dominio frontend (ver arriba).
@@ -269,7 +269,7 @@ VITE_API_BASE_URL=https://tu-api-en-render.onrender.com
 
 ---
 
-## ✅ Checklist Final
+## Checklist Final
 
 - [ ] Código subido a Git
 - [ ] Variables de entorno configuradas
@@ -281,7 +281,6 @@ VITE_API_BASE_URL=https://tu-api-en-render.onrender.com
 
 ---
 
-## 🎉 ¡Listo!
+## Listo!
 
 Tu aplicación debería estar funcionando correctamente. Si tienes problemas, revisa los logs de despliegue en la plataforma que elegiste.
-

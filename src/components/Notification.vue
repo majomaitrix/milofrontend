@@ -2,10 +2,6 @@
   <div v-if="show" class="notification" :class="type">
     <div class="notification-content">
       <div class="notification-icon">
-        <span v-if="type === 'success'">✅</span>
-        <span v-else-if="type === 'error'">❌</span>
-        <span v-else-if="type === 'warning'">⚠️</span>
-        <span v-else>ℹ️</span>
       </div>
       <div class="notification-message">
         <h4>{{ title }}</h4>
