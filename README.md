@@ -1,7 +1,3 @@
-# Milo Restaurant – Frontend (Vue 3 + TypeScript)
-
-Aplicación frontend para la gestión de un restaurante. Incluye autenticación por roles, administración de productos, listado y gestión de pedidos con cambio de estado, notificaciones, paginación y filtros avanzados.
-
 # Milo Restaurant Frontend
 
 Vue 3 + TypeScript frontend for the Milo restaurant management system.
