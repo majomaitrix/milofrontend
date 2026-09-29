@@ -8,6 +8,10 @@ This project demonstrates frontend integration with an ASP.NET Core REST API, in
 
 https://milofrontend-seven.vercel.app
 
+## Application Preview
+
+![Milo Restaurant Frontend](docs/screenshots/frontend-dashboard.PNG)
+
 ## Key Technical Highlights
 
 - Vue 3 with Composition API
