@@ -2,6 +2,29 @@
 
 Aplicación frontend para la gestión de un restaurante. Incluye autenticación por roles, administración de productos, listado y gestión de pedidos con cambio de estado, notificaciones, paginación y filtros avanzados.
 
+# Milo Restaurant Frontend
+
+Vue 3 + TypeScript frontend for the Milo restaurant management system.
+
+This project demonstrates frontend integration with an ASP.NET Core REST API, including JWT authentication, role-based navigation, API consumption with Axios, state management with Pinia, protected routes, CRUD workflows, filtering, pagination and order-status management.
+
+## Live Demo
+
+https://milofrontend-seven.vercel.app
+
+## Key Technical Highlights
+
+- Vue 3 with Composition API
+- TypeScript
+- Vue Router with protected routes
+- Pinia state management
+- Axios REST API integration
+- JWT authentication
+- Role-based access control
+- CRUD interfaces
+- Pagination and advanced filtering
+- Vite build tooling
+- Vercel deployment
 ## Stack
 - Framework: Vue 3 (Composition API)
 - Lenguaje: TypeScript
